@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:background="#e3f2fd"
+    android:layout_height="match_parent">
+
+    <fragment
+        android:id="@+id/fragment_search"
+        android:name="com.hnineiphyu.daweidirectory.SearchFragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dimen_4"
+        android:layout="@layout/fragment_search"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <fragment
+        android:id="@+id/fragment_sub_category"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dimen_12"
+        android:layout_marginRight="@dimen/dimen_12"
+        android:name="com.hnineiphyu.daweidirectory.CategotySubFragment"
+        app:layout_constraintTop_toBottomOf="@id/fragment_search"/>
+
+    <fragment
+        android:id="@+id/category_fragment"
+        android:name="com.hnineiphyu.daweidirectory.ui.directory.DirectoryRecyclerFragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="MissingConstraints"
+        app:layout_constraintTop_toBottomOf="@id/fragment_sub_category" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

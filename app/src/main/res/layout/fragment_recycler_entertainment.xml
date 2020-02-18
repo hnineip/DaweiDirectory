@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".ui.entertainment.EntertainmentRecyclerFragment">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_entertainment"
+        android:layout_marginLeft="@dimen/dimen_6"
+        android:layout_marginRight="@dimen/dimen_6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+</FrameLayout>

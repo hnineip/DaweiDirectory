@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_directory">
+
+    <fragment
+        android:id="@+id/navigation_directory"
+        android:name="com.hnineiphyu.daweidirectory.ui.directory.DirectoryFragment"
+        android:label="@string/title_directory"
+        tools:layout="@layout/fragment_list" >
+        <action
+            android:id="@+id/action_navigation_directory_to_navigation_restruant"
+            app:destination="@id/navigation_restruant" />
+        <action
+            android:id="@+id/action_navigation_directory_to_navigation_education"
+            app:destination="@id/navigation_education" />
+        <action
+            android:id="@+id/action_navigation_directory_to_navigation_hotel"
+            app:destination="@id/navigation_hotel" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_entertainment"
+        android:name="com.hnineiphyu.daweidirectory.ui.entertainment.EntertainmentFragment"
+        android:label="@string/title_entertainment"
+        tools:layout="@layout/fragment_entertainment" />
+
+    <fragment
+        android:id="@+id/navigation_about"
+        android:name="com.hnineiphyu.daweidirectory.ui.about.AboutFragment"
+        android:label="@string/title_about"
+        tools:layout="@layout/fragment_about" />
+
+    <fragment
+        android:id="@+id/navigation_restruant"
+        android:name="com.hnineiphyu.daweidirectory.ui.restruant.RestruantFragment"
+        tools:layout="@layout/fragment_restruants"
+        android:label="@string/title_restruant">
+
+        <action
+            android:id="@+id/action_navigation_restruant_to_navigation_detail_restruant"
+            app:destination="@id/navigation_detail_restruant" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_education"
+        android:name="com.hnineiphyu.daweidirectory.ui.education.EducationFragment"
+        android:label="Education"
+        tools:layout="@layout/fragment_education" />
+
+    <fragment
+        android:id="@+id/navigation_detail_restruant"
+        android:name="com.hnineiphyu.daweidirectory.ui.restruantdetail.RestruantDetailFragment"
+        tools:layout="@layout/fragment_restruant_detail"
+        android:label="RestruantDetail" />
+
+    <fragment
+        android:id="@+id/navigation_hotel"
+        android:name="com.hnineiphyu.daweidirectory.ui.hotel.HotelFragment"
+        android:label="Hotels"
+        tools:layout="@layout/fragment_hotel"/>
+
+    <fragment
+        android:id="@+id/navigation_health"
+        android:name="com.hnineiphyu.daweidirectory.ui.health.HealthFragment"
+        android:label="Health"
+        />
+
+
+</navigation>
