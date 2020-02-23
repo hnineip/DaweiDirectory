@@ -3,8 +3,6 @@ package com.hnineiphyu.daweidirectory.adapter
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
-import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.hnineiphyu.daweidirectory.R
 import com.hnineiphyu.daweidirectory.model.MainCategory
@@ -50,9 +48,6 @@ class MainCategoryAdapter(var categoryList: ArrayList<MainCategory> = ArrayList(
             itemView.icon_restruant.setImageResource(mainCategory.icon)
 
         }
-
-//        var Name = itemView.findViewById<TextView>(R.id.category_name)
-//        var Image = itemView.findViewById<ImageView>(R.id.icon_restruant)
 
         override fun onClick(v: View?) {
             mClickListenter?.onClick(mainCategory)

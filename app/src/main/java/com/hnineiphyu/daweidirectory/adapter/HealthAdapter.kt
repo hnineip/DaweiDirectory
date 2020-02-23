@@ -7,9 +7,8 @@ import androidx.recyclerview.widget.RecyclerView
 import com.hnineiphyu.daweidirectory.R
 import com.hnineiphyu.daweidirectory.model.InfosItem
 import com.hnineiphyu.daweidirectory.ui.health.HealthFragment
-import com.hnineiphyu.daweidirectory.ui.hotel.HotelFragment
 import com.squareup.picasso.Picasso
-import kotlinx.android.synthetic.main.item_education.view.*
+import kotlinx.android.synthetic.main.item_health.view.*
 
 class HealthAdapter(var healthlList: ArrayList<InfosItem> = ArrayList()) :
     RecyclerView.Adapter<HealthAdapter.HealthViewHolder>() {
@@ -26,7 +25,6 @@ class HealthAdapter(var healthlList: ArrayList<InfosItem> = ArrayList()) :
     override fun onBindViewHolder(holder: HealthViewHolder, position: Int) {
         holder.bindHealth(healthlList.get(position))
     }
-
 
     var nClickListenter: ClickListenter? = null
 
@@ -53,9 +51,8 @@ class HealthAdapter(var healthlList: ArrayList<InfosItem> = ArrayList()) :
             this.infosItem = infosItem
             Picasso.get()
                 .load(infosItem.photo)
-                .placeholder(R.drawable.loading)
-                .into(view.education_image)
-            view.education_name.text = infosItem.cname
+                .into(view.health_image)
+            view.health_name.text = infosItem.title
         }
 
         override fun onClick(v: View?) {
@@ -66,6 +63,5 @@ class HealthAdapter(var healthlList: ArrayList<InfosItem> = ArrayList()) :
         interface ClickListenter {
             fun OnClick(infosItem: InfosItem)
         }
-
     }
 

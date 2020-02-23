@@ -25,7 +25,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/sub_category_name"
+            android:id="@+id/sub_name"
             android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:background="#ffffff"
@@ -42,8 +42,8 @@
             android:layout_height="60dp"
             android:background="#80FCE4EC"
             android:layout_marginLeft="@dimen/dimen_8"
-            app:layout_constraintLeft_toRightOf="@id/sub_category_name"
-            app:layout_constraintRight_toLeftOf="@id/sub_category_name"
+            app:layout_constraintLeft_toRightOf="@id/sub_name"
+            app:layout_constraintRight_toLeftOf="@id/sub_name"
             tools:ignore="MissingConstraints" />
 
         <ImageView
@@ -61,7 +61,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="#ffffff"
-            android:text="Famous Place"
+            android:text="Famous Places"
             android:textSize="14sp"
             android:textAlignment="center"
             app:layout_constraintLeft_toRightOf="@id/category_vertical_line"
@@ -73,7 +73,7 @@
             android:layout_width="2dp"
             android:layout_height="60dp"
             android:background="#80FCE4EC"
-            android:layout_marginRight="@dimen/dimen_20"
+            android:layout_marginRight="@dimen/dimen_16"
             app:layout_constraintLeft_toRightOf="@id/sub_famous_name"
             app:layout_constraintRight_toLeftOf="@id/icon_emergency"
             tools:ignore="MissingConstraints" />

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#e3f2fd"
+    android:layout_marginBottom="@dimen/dimen_50"
+    android:orientation="vertical">
+
+    <fragment
+        android:id="@+id/fragment_search"
+        android:name="com.hnineiphyu.daweidirectory.FragmentSearchRestruant"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dimen_4"
+        android:layout="@layout/fragment_search"
+        tools:ignore="MissingConstraints" />
+
+    <fragment
+        android:id="@+id/fragment_restaurant"
+        android:name="com.hnineiphyu.daweidirectory.ui.restaurant.RestaurantRecyclerFragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dimen_8"
+        android:layout_marginRight="@dimen/dimen_8"
+        android:layout_marginBottom="@dimen/dimen_20"
+        android:layout="@layout/fragment_search"
+        tools:ignore="MissingConstraints" />
+
+</LinearLayout>

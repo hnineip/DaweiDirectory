@@ -10,5 +10,9 @@
     <dimen name="dimen_4">4dp</dimen>
     <dimen name="dimen_10">10dp</dimen>
     <dimen name="dimen_2">2dp</dimen>
+    <dimen name="dimen_40">40dp</dimen>
+    <dimen name="dimen_50">50dp</dimen>
+    <dimen name="dimen_14">14dp</dimen>
+    <dimen name="dimen_13">13dp</dimen>
     <dimen name="dimen_8">8dp</dimen>
 </resources>

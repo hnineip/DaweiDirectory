@@ -12,7 +12,6 @@ import androidx.recyclerview.widget.RecyclerView
 import com.hnineiphyu.daweidirectory.R
 import com.hnineiphyu.daweidirectory.adapter.MainCategoryAdapter
 import com.hnineiphyu.daweidirectory.model.MainCategory
-import com.hnineiphyu.daweidirectory.ui.restruant.RestruantViewModel
 import com.hnineiphyu.daweidirectory.viewmodel.SelectedCategoryViewModel
 
 class DirectoryRecyclerFragment : Fragment(), MainCategoryAdapter.ClickListenter {
@@ -28,12 +27,12 @@ class DirectoryRecyclerFragment : Fragment(), MainCategoryAdapter.ClickListenter
 
         var CategoryList = ArrayList<MainCategory>()
 
-        CategoryList.add(MainCategory(R.drawable.ic_food, "Restruants", 6))
-        CategoryList.add(MainCategory(R.drawable.ic_education, "Education", 10))
-        CategoryList.add(MainCategory(R.drawable.iconfinder_hotel, "Hotels", 9))
-        CategoryList.add(MainCategory(R.drawable.ic_health, "Health", 11))
-        CategoryList.add(MainCategory(R.drawable.ic_bank, "Bank", 8))
-        CategoryList.add(MainCategory(R.drawable.ic_fashion, "Fashion", 9))
+        CategoryList.add(MainCategory(R.drawable.ic_food, "Restaurants", 6))
+        CategoryList.add(MainCategory(R.drawable.ic_education, "Education", 11))
+        CategoryList.add(MainCategory(R.drawable.iconfinder_hotel, "Hotels", 7))
+        CategoryList.add(MainCategory(R.drawable.ic_health, "Health", 12))
+        CategoryList.add(MainCategory(R.drawable.ic_bank, "Bank", 9))
+        CategoryList.add(MainCategory(R.drawable.ic_fashion, "Fashion", 10))
 
         var mainCategoryAdapter = MainCategoryAdapter(CategoryList)
 
@@ -58,10 +57,60 @@ class DirectoryRecyclerFragment : Fragment(), MainCategoryAdapter.ClickListenter
                 .navigate(R.id.action_navigation_directory_to_navigation_restruant)
         }
 
-//        else if(mainCategory.key == 10){
-//            view!!.findNavController()
-//                .navigate(R.id.action_navigation_directory_to_navigation_education)
-//        }
+        else if(mainCategory.key == 11){
+
+            val selectedcategoryViewModel =
+                ViewModelProviders.of(activity!!).get(SelectedCategoryViewModel::class.java)
+
+            selectedcategoryViewModel.selectedCategory(mainCategory)
+
+            view!!.findNavController()
+                .navigate(R.id.action_navigation_directory_to_navigation_education)
+        }
+
+        else if(mainCategory.key == 7){
+
+            val selectedcategoryViewModel =
+                ViewModelProviders.of(activity!!).get(SelectedCategoryViewModel::class.java)
+
+            selectedcategoryViewModel.selectedCategory(mainCategory)
+
+            view!!.findNavController()
+                .navigate(R.id.action_navigation_directory_to_navigation_hotel)
+        }
+
+        else if(mainCategory.key == 12){
+
+            val selectedcategoryViewModel =
+                ViewModelProviders.of(activity!!).get(SelectedCategoryViewModel::class.java)
+
+            selectedcategoryViewModel.selectedCategory(mainCategory)
+
+            view!!.findNavController()
+                .navigate(R.id.action_navigation_directory_to_navigation_health)
+        }
+
+        else if(mainCategory.key == 9){
+
+            val selectedcategoryViewModel =
+                ViewModelProviders.of(activity!!).get(SelectedCategoryViewModel::class.java)
+
+            selectedcategoryViewModel.selectedCategory(mainCategory)
+
+            view!!.findNavController()
+                .navigate(R.id.action_navigation_directory_to_navigation_bank)
+        }
+
+        else if(mainCategory.key == 10){
+
+            val selectedcategoryViewModel =
+                ViewModelProviders.of(activity!!).get(SelectedCategoryViewModel::class.java)
+
+            selectedcategoryViewModel.selectedCategory(mainCategory)
+
+            view!!.findNavController()
+                .navigate(R.id.action_navigation_directory_to_navigation_fashion)
+        }
     }
 }
 

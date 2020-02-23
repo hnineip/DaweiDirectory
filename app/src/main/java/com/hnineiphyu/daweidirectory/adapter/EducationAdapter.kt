@@ -52,9 +52,9 @@ class EducationAdapter(var educationList: ArrayList<InfosItem> = ArrayList()) :
             this.infosItem = infosItem
             Picasso.get()
                 .load(infosItem.photo)
-                .placeholder(R.drawable.loading)
+                .placeholder(R.drawable.educate)
                 .into(view.education_image)
-            view.education_name.text = infosItem.cname
+            view.education_name.text = infosItem.title
         }
 
         override fun onClick(v: View?) {

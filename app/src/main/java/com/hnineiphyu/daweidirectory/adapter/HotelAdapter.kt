@@ -8,7 +8,7 @@ import com.hnineiphyu.daweidirectory.R
 import com.hnineiphyu.daweidirectory.model.InfosItem
 import com.hnineiphyu.daweidirectory.ui.hotel.HotelFragment
 import com.squareup.picasso.Picasso
-import kotlinx.android.synthetic.main.item_education.view.*
+import kotlinx.android.synthetic.main.item_hotel.view.*
 
 class HotelAdapter(var hotelList: ArrayList<InfosItem> = ArrayList()) :
     RecyclerView.Adapter<HotelAdapter.HotelViewHolder>() {
@@ -27,10 +27,10 @@ class HotelAdapter(var hotelList: ArrayList<InfosItem> = ArrayList()) :
     }
 
 
-    var nClickListenter: ClickListenter? = null
+    var mClickListenter: ClickListenter? = null
 
     fun setOnClickListener(clickListenter: HotelFragment) {
-        this.nClickListenter = clickListenter
+        this.mClickListenter = clickListenter
     }
 
     fun updateList(infosItem: List<InfosItem>) {
@@ -52,13 +52,12 @@ class HotelAdapter(var hotelList: ArrayList<InfosItem> = ArrayList()) :
             this.infosItem = infosItem
             Picasso.get()
                 .load(infosItem.photo)
-                .placeholder(R.drawable.loading)
-                .into(view.education_image)
-            view.education_name.text = infosItem.cname
+                .into(view.hotel_image)
+            view.hotel_name.text = infosItem.title
         }
 
         override fun onClick(v: View?) {
-            nClickListenter?.OnClick(infosItem)
+            mClickListenter?.OnClick(infosItem)
         }
     }
     interface ClickListenter {

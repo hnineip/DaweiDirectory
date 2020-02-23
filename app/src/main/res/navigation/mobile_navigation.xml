@@ -10,15 +10,46 @@
         android:name="com.hnineiphyu.daweidirectory.ui.directory.DirectoryFragment"
         android:label="@string/title_directory"
         tools:layout="@layout/fragment_list" >
+
+
+
+        <action
+            android:id="@+id/action_navigation_directory_to_navigation_education"
+            app:destination="@id/navigation_education" />
+
+        <action
+            android:id="@+id/action_navigation_directory_to_navigation_hotel"
+            app:destination="@id/navigation_hotel" />
+
+        <action
+            android:id="@+id/action_navigation_directory_to_navigation_health"
+            app:destination="@id/navigation_health" />
+
+        <action
+            android:id="@+id/action_navigation_directory_to_navigation_bank"
+            app:destination="@id/navigation_bank" />
+
+        <action
+            android:id="@+id/action_navigation_directory_to_navigation_fashion"
+            app:destination="@id/navigation_fashion" />
+
+<!--        <action-->
+<!--            android:id="@+id/action_navigation_directory_to_navigation_sub_categories"-->
+<!--            app:destination="@id/navigation_sub_categories" />-->
+
         <action
             android:id="@+id/action_navigation_directory_to_navigation_restruant"
             app:destination="@id/navigation_restruant" />
         <action
-            android:id="@+id/action_navigation_directory_to_navigation_education"
-            app:destination="@id/navigation_education" />
+            android:id="@+id/action_navigation_directory_to_navigation_emergency"
+            app:destination="@id/navigation_emergency" />
         <action
-            android:id="@+id/action_navigation_directory_to_navigation_hotel"
-            app:destination="@id/navigation_hotel" />
+            android:id="@+id/action_navigation_directory_to_navigation_place"
+            app:destination="@id/navigation_place" />
+        <action
+            android:id="@+id/action_navigation_directory_to_navigation_sub_categories"
+            app:destination="@id/navigation_sub_categories" />
+
     </fragment>
 
     <fragment
@@ -35,10 +66,9 @@
 
     <fragment
         android:id="@+id/navigation_restruant"
-        android:name="com.hnineiphyu.daweidirectory.ui.restruant.RestruantFragment"
-        tools:layout="@layout/fragment_restruants"
+        android:name="com.hnineiphyu.daweidirectory.ui.restaurant.RestaurantFragment"
+        tools:layout="@layout/fragment_restaurants"
         android:label="@string/title_restruant">
-
         <action
             android:id="@+id/action_navigation_restruant_to_navigation_detail_restruant"
             app:destination="@id/navigation_detail_restruant" />
@@ -48,25 +78,114 @@
         android:id="@+id/navigation_education"
         android:name="com.hnineiphyu.daweidirectory.ui.education.EducationFragment"
         android:label="Education"
-        tools:layout="@layout/fragment_education" />
+        tools:layout="@layout/fragment_education" >
+        <action
+            android:id="@+id/action_navigation_education_to_navigation_education_detail"
+            app:destination="@id/navigation_education_detail" />
+    </fragment>
 
     <fragment
         android:id="@+id/navigation_detail_restruant"
-        android:name="com.hnineiphyu.daweidirectory.ui.restruantdetail.RestruantDetailFragment"
-        tools:layout="@layout/fragment_restruant_detail"
-        android:label="RestruantDetail" />
+        android:name="com.hnineiphyu.daweidirectory.ui.restaurantdetail.RestaurantDetailFragment"
+        tools:layout="@layout/fragment_restaurant_detail"
+        android:label="Restruant Detail" />
 
     <fragment
         android:id="@+id/navigation_hotel"
         android:name="com.hnineiphyu.daweidirectory.ui.hotel.HotelFragment"
         android:label="Hotels"
-        tools:layout="@layout/fragment_hotel"/>
+        tools:layout="@layout/fragment_hotel">
+        <action
+            android:id="@+id/action_navigation_hotel_to_navigation_detail_hotel"
+            app:destination="@id/navigation_detail_hotel" />
+    </fragment>
 
     <fragment
         android:id="@+id/navigation_health"
         android:name="com.hnineiphyu.daweidirectory.ui.health.HealthFragment"
-        android:label="Health"
-        />
+        tools:layout="@layout/fragment_health"
+        android:label="Health" >
+        <action
+            android:id="@+id/action_navigation_health_to_navigation_health_detail"
+            app:destination="@id/navigation_health_detail" />
+    </fragment>
 
+    <fragment
+        android:id="@+id/navigation_detail_hotel"
+        android:name="com.hnineiphyu.daweidirectory.ui.hoteldetail.HotelDetailFragment"
+        tools:layout="@layout/fragment_hotel_detail"
+        android:label="Hotel Detail" />
+
+    <fragment
+        android:id="@+id/navigation_bank"
+        android:name="com.hnineiphyu.daweidirectory.ui.bank.BankFragment"
+        tools:layout="@layout/fragment_bank"
+        android:label="Bank" >
+        <action
+            android:id="@+id/action_navigation_bank_to_navigation_bank_detail"
+            app:destination="@id/navigation_bank_detail" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_bank_detail"
+        android:name="com.hnineiphyu.daweidirectory.ui.bankdetail.BankDetailFragment"
+        tools:layout="@layout/fragment_bank_detail"
+        android:label="Bank Detail" />
+
+    <fragment
+        android:id="@+id/navigation_education_detail"
+        android:name="com.hnineiphyu.daweidirectory.ui.educationdetail.EducationDetailFragment"
+        tools:layout="@layout/fragment_education_detail"
+        android:label="Education Detail" />
+
+    <fragment
+        android:id="@+id/navigation_health_detail"
+        android:name="com.hnineiphyu.daweidirectory.ui.healthdetail.HealthDetailFragment"
+        tools:layout="@layout/fragment_health_detail"
+        android:label="Health Detail" />
+
+    <fragment
+        android:id="@+id/navigation_fashion"
+        android:name="com.hnineiphyu.daweidirectory.ui.fashion.FashionFragment"
+        tools:layout="@layout/fragment_fashion"
+        android:label="Fashion" >
+        <action
+            android:id="@+id/action_navigation_fashion_to_navigation_fashion_detail"
+            app:destination="@id/navigation_fashion_detail" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_fashion_detail"
+        android:name="com.hnineiphyu.daweidirectory.ui.fashiondetail.FashionDetailFragment"
+        tools:layout="@layout/fragment_fashion_detail"
+        android:label="Fashion Detail" />
+
+    <fragment
+        android:id="@+id/navigation_emergency"
+        android:name="com.hnineiphyu.daweidirectory.ui.emergency.EmergencyFragment"
+        tools:layout="@layout/fragment_emergency"
+        android:label="Emergency" />
+
+    <fragment
+        android:id="@+id/navigation_place"
+        android:name="com.hnineiphyu.daweidirectory.ui.place.PlaceFragment"
+        tools:layout="@layout/fragment_place"
+        android:label="Well Known Places" >
+        <action
+            android:id="@+id/action_navigation_place_to_navigation_place_detail"
+            app:destination="@id/navigation_place_detail" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_place_detail"
+        android:name="com.hnineiphyu.daweidirectory.ui.placedetail.PlaceDetailFragment"
+        android:label="Place Detail"
+        tools:layout="@layout/fragment_place_detail"/>
+
+    <fragment
+    android:id="@+id/navigation_sub_categories"
+    android:name="com.hnineiphyu.daweidirectory.ui.subcategories.RecyclerSubCategoriesFragment"
+    tools:layout="@layout/fragment_recycler_sub_categories"
+    android:label="Sub Categories" />
 
 </navigation>

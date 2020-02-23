@@ -10,7 +10,7 @@ interface DirectoryInterface {
     @GET("getList")
     fun getInfos(
         @Query("listing_id")
-        listing_id: String
+        listing_id: Int = 6
     ): Call<ResponseInfos>
 
 }

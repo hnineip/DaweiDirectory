@@ -10,7 +10,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="90dp">
 
         <androidx.cardview.widget.CardView
             android:id="@+id/hotel_cards"
@@ -34,11 +34,11 @@
         </androidx.cardview.widget.CardView>
 
         <TextView
-            android:id="@+id/education_name"
+            android:id="@+id/hotel_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             tools:text="Top Land"
-            android:textSize="18sp"
+            android:textSize="16sp"
             android:textStyle="bold"
             android:layout_margin="@dimen/dimen_16"
             app:layout_constraintLeft_toRightOf="@id/hotel_cards"

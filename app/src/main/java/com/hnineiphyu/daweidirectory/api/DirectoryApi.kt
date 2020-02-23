@@ -23,7 +23,7 @@ class DirectoryApi {
 
     }
 
-    fun getResult(key: String): Call<ResponseInfos> {
+    fun getResult(key: Int): Call<ResponseInfos> {
         return directoryInterface.getInfos(key)
     }
 }

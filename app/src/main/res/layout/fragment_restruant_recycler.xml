@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_margin="@dimen/dimen_6"
-    tools:context=".ui.restruant.RestruantRecyclerFragment">
+    tools:context=".ui.restaurant.RestaurantRecyclerFragment">
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerRestruant"
@@ -15,11 +15,11 @@
         android:id="@+id/txtError"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:gravity="center"
-        android:visibility="invisible"
-        android:text="NETWORK PROBLEM!!!"
         android:layout_margin="@dimen/dimen_12"
+        android:gravity="center"
+        android:text="NETWORK PROBLEM!!!"
         android:textSize="20sp"
+        android:visibility="invisible"
         tools:ignore="MissingConstraints" />
 
     <ProgressBar
@@ -27,6 +27,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        tools:ignore="MissingConstraints" />
+        android:visibility="invisible" />
 
 </FrameLayout>

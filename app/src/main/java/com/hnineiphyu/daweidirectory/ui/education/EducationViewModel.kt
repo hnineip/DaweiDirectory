@@ -1,10 +1,9 @@
 package com.hnineiphyu.daweidirectory.ui.education
 
-import android.util.Log
+
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import androidx.lifecycle.ViewModelProviders
 import com.hnineiphyu.daweidirectory.api.DirectoryApi
 import com.hnineiphyu.daweidirectory.model.ResponseInfos
 import retrofit2.Call
@@ -30,11 +29,11 @@ class EducationViewModel : ViewModel() {
 
     private val directoryApi: DirectoryApi = DirectoryApi()
 
-    fun loadResults(key: String) {
+    fun loadResults() {
 
         loading.value = true
 
-       var Call = directoryApi.getResult(key)
+       var Call = directoryApi.getResult(11)
 
         Call.enqueue(object: Callback<ResponseInfos> {
             override fun onResponse(call: Call<ResponseInfos>, response: Response<ResponseInfos>) {
@@ -44,7 +43,6 @@ class EducationViewModel : ViewModel() {
                         response.body()?.infos?: emptyList())
                     results.value = resultList
                 }
-                Log.d("Result>>>>>", response.body().toString())
             }
 
             override fun onFailure(call: Call<ResponseInfos>, t: Throwable) {

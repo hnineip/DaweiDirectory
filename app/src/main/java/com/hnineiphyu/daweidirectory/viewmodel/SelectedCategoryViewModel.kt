@@ -3,7 +3,6 @@ package com.hnineiphyu.daweidirectory.viewmodel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.hnineiphyu.daweidirectory.model.InfosItem
 import com.hnineiphyu.daweidirectory.model.MainCategory
 
 
